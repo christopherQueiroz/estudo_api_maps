@@ -27,7 +27,7 @@ function initialize(){
     
 	marker = new google.maps.Marker({
 		map: map,
-		draggable: true,
+		draggable: true
 		
 	});
 
@@ -75,7 +75,8 @@ $(document).ready(function(){
 
   google.maps.event.addListener(marker, 'drag', function(){
 
-  	geocoder.geocode({'LatLng': marker.setPosition()}, function(results,status){
+
+  	geocoder.geocode({"latLng" : marker.getPosition()}, function(results, status){
 
   		if(status == google.maps.GeocoderStatus.OK){
 
@@ -85,6 +86,8 @@ $(document).ready(function(){
   				$("#txtLatitude").val(marker.getPosition().lat());
   				$("#txtLongitude").val(marker.getPosition().lng());
   			}
+
+  			else marker.setPosition(new google.maps.LatLng(0,0));
   		}
   	});
   });
