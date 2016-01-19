@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Estudo API Google Maps - Localização de Endereço</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+<style type="text/css">
+
+
+
+div#map{
+    
+    margin: auto;
+	width: 700px;
+	height: 400px;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+    
+
+
+
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAwrvj62Pn6olILP9QlpbhnQT0MnilJdRk&sensor=false"></script>
+   
+    
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/endereco.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    
+	
+	
+	
+
+	<div id="apresentacao">
+
+
+		<form method="post" action="index.html">
+
+			<fieldset>
+
+				
+
+
+					
+
+					<p><input type="text" id="txtEndereco" name="txtEndereco"></p>
+
+	                 <div id="map">	</div>
+
+					<p><input type ="text" id="txtLatitude" name="txtLatitude"> 
+					<input type ="text" id ="txtLongitude" name="txtLongitude"></p>
+
+		
+
+			</fieldset>
+
+		</form>
+
+	</div>
+ 
+
+</body>
+
+</html>
